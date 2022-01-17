@@ -118,12 +118,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.ts":[function(require,module,exports) {
-//types
-//interfaces
-var animal = {
-  nome: 'Elefante',
-  tipo: "terreste"
-};
+//informo o tipo de dado com os as para o Typesrcipt entender
+var input = document.getElementById('input');
+input.addEventListener('input', function (event) {
+  // console.log('digitei');
+  //aponto o tipo e consigo pegar o elemento.
+  var i = event.currentTarget;
+  console.log(i.value);
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -152,7 +154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52585" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

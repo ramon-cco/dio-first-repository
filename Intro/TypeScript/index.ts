@@ -1,20 +1,11 @@
-//types
-//interfaces
 
-// na interface eu defino o objeto com suas opções
-interface IAnimal{
-    nome: string;
-    tipo: 'terreste' | 'aquático';
-}
+//informo o tipo de dado com os as para o Typesrcipt entender
+const input = document.getElementById('input') as HTMLInputElement;
 
-//posso estender a interface 
-interface IFelino extends IAnimal{
-    visaoNoturna: boolean;
-}
+input.addEventListener('input', (event)=>{
+    // console.log('digitei');
 
-
-const animal: IAnimal = {
-    nome: 'Elefante',
-    tipo: "terreste"
-
-}
+    //aponto o tipo e consigo pegar o elemento.
+    const i = event.currentTarget as HTMLInputElement;
+    console.log(i.value)
+});
